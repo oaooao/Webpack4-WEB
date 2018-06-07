@@ -2,6 +2,22 @@
 
 # Webpack4配置备忘录
 
+
+
+
+
+>+ ##### 版本 : webpack 4.10.2 
+>
+>+ ##### 入口文件 ：`./src/index.js`
+>
+>+ ##### 输出目录 ：`./dist`
+>
+>+ ##### 支持 ：ES6语法、代码压缩、代码分割、Eslint语法检查、Less、Sass、Stylus、自动补全浏览器兼容css代码、源代码映射、本地服务器、热更新、热模块加载、文件清理、静态文件拷贝
+
+
+
+
+
 ##### 用到的命令行：
 
 ```
@@ -30,7 +46,13 @@ npm i uglifyjs-webpack-plugin	 // 代码压缩插件
 npm i source-map-loader 	// 源码映射
 
 npm i autoprefixer postcss-loader -D	// css预处理 自动补全css前缀 解决浏览器兼容
+
+npm i copy-webpack-plugin - D	// 拷贝静态文件用的
 ```
+
+
+
+##### 配置过程：
 
 
 
@@ -356,3 +378,26 @@ module.exports = {
 }
 ```
 
+
+
+
+10. ###### 更多配置详见 `webpack.config.js` 文件
+
+
+
+11. ###### 参考文档
+
+>[陈三的webpack4教程]: https://blog.zfanw.com/webpack-tutorial/
+>[Webpack 4 Tutorial]: https://www.valentinog.com/blog/webpack-4-tutorial
+>[webpack4配置笔记]: https://www.my-fe.pub/post/webpack-4-basic-config-note.html#copy-webpack-plugin
+>[webpack4 升级与使用]: https://zhuanlan.zhihu.com/p/34421707
+>
+>
+
+### 更多配置参考官方文档 
+
+> **基本概念** : <https://webpack.docschina.org/concepts/>
+> **配置示例** : <https://webpack.docschina.org/configuration/>
+> **API** : <https://webpack.docschina.org/api/>
+> **loaders** : <https://webpack.docschina.org/loaders//>
+> **plugins** : <https://webpack.docschina.org/plugins/>
