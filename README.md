@@ -2,23 +2,7 @@
 
 # Webpack4配置备忘录
 
-
-
-
-
->+ ##### 版本 : webpack 4.10.2 
->
->+ ##### 入口文件 ：`./src/index.js`
->
->+ ##### 输出目录 ：`./dist`
->
->+ ##### 支持 ：ES6语法、代码压缩、代码分割、Eslint语法检查、Less、Sass、Stylus、自动补全浏览器兼容css代码、源代码映射、本地服务器、热更新、热模块加载、文件清理、静态文件拷贝
-
-
-
-
-
-##### 用到的命令行：
+#### 用到的命令行：
 
 ```
 npm init -y		// 初始化
@@ -47,14 +31,28 @@ npm i source-map-loader 	// 源码映射
 
 npm i autoprefixer postcss-loader -D	// css预处理 自动补全css前缀 解决浏览器兼容
 
-npm i copy-webpack-plugin - D	// 拷贝静态文件用的
+npm i copy-webpack-plugin -D	// 拷贝静态文件，但是和清理插件有冲突
 ```
 
 
 
-##### 配置过程：
+#### 使用方法:  (先下载或者clone)
+
+```
+npm install			# 安装依赖模块
+```
+
+```
+npm run start		# 运行开发环境，默认监听9090端口
+```
+
+```
+npm run build		# 正式打包，用于生产环境
+```
 
 
+
+#### 配置过程：
 
 ###### 1. 初始化
 
@@ -376,8 +374,8 @@ module.exports = {
 ...
 
 }
-```
 
+```
 
 
 

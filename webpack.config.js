@@ -32,7 +32,7 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'), // 服务于 dist/ 目录
         open: true, // 当open启用时，开发服务器将自动打开浏览器
         compress: true, // 为服务的所有内容启用gzip压缩
-        host: '192.168.16.13', // 指定要使用的主机，默认是localhost，如果希望可以被外部访问，指定成 '0.0.0.0' 即可
+        // host: '0.0.0.0', // 指定要使用的主机，默认是localhost，如果希望可以被外部访问，指定成 '0.0.0.0' 即可
         port: 9090, // 监听端口
         proxy: {
             /* 无论任何请求都将转向请求 http://localhost:3000/aaa/users */
@@ -58,7 +58,7 @@ module.exports = {
             errors: true // 显示错误
         },
         // historyApiFallback:true, // 使用HTML5 History API时，index.html可能需要提供该页面来代替404响应
-        // openPage:"192.168.16.13", // 指定浏览器打开的页面
+        // openPage:"/test", // 指定浏览器打开的页面
         // allowedHosts: [ // 允许访问开发服务器的服白名单
         //     'host.com',
         //     'host2.com'
