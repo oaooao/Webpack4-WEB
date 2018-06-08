@@ -6,7 +6,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin') // 代码压缩插件�
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin') // 压缩css插件
 const CleanWebpackPlugin = require('clean-webpack-plugin') // 清理dist文件夹插件
 const CopyWebpackPlugin = require('copy-webpack-plugin') // 复制文件用
-const autoprefixer = require('autoprefixer') // 自动补全前缀
+// const autoprefixer = require('autoprefixer') // 自动补全前缀
 // const FaviconsWebpackPlugin = require('favicons-webpack-plugin') // 自动生成各尺寸的favicon图标
 // const HtmlBeautifyPlugin = require('html-beautify-webpack-plugin') // Html文件美化插件
 
@@ -162,7 +162,6 @@ module.exports = {
         extensions: ['.js', '.jsx', '.less', '.css', '.scss', '.styl'] // 后缀名自动补全
     },
 
-    postcss: [autoprefixer({browsers: ['last 2 versions']})],
     module: {
         rules: [
             /* 加载器 */
@@ -212,6 +211,7 @@ module.exports = {
             {
                 // css加载器
                 test: /\.css$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         // fallback to style-loader in development
@@ -231,6 +231,7 @@ module.exports = {
             {
                 // less加载器
                 test: /\.less$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader
@@ -255,6 +256,7 @@ module.exports = {
             {
                 // sass加载器
                 test: /\.scss$/,
+                exclude: /node_modules/,
                 use: [
                     {
                         loader: process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader
@@ -278,6 +280,7 @@ module.exports = {
             },
             { // .stylus解析
                 test: /\.styl$/,
+                exclude: /node_modules/,
                 loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
             },
             { // 源码映射，报错时指向源码而不是编译后的代码
