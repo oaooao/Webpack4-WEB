@@ -49,7 +49,7 @@ npm i copy-webpack-plugin -D	// 拷贝静态文件，但是和清理插件有冲
 #### 使用方法:  (先下载或者clone)
 
 ```
-npm install			# 安装依赖模块
+npm install		# 安装依赖模块
 ```
 
 ```
