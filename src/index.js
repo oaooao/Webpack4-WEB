@@ -1,14 +1,11 @@
 // index.js
-
-// 引入css文件
-import './main.css'
+import Less from './loaderTest/less/less.js'
+import Css from './loaderTest/css/css.js'
 
 console.log('I am index.js')
 
-// 测试css
-const obj1 = document.createElement('h1')
+// 测试Css
+Css.init()
 
-obj1.id = 'css'
-obj1.innerHTML = '测试css'
-
-document.body.appendChild(obj1)
+// 测试Less
+Less.init()
